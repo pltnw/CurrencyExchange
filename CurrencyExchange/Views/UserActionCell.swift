@@ -8,5 +8,5 @@
 import UIKit
 
 class UserActionCell: UICollectionViewCell {
-    
+    @IBOutlet var userActionsLabel: UILabel!
 }
