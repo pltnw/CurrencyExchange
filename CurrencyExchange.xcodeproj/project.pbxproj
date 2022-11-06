@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		025A6A4D2918147A00A55C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A6A4C2918147A00A55C59 /* AppDelegate.swift */; };
 		025A6A4F2918147A00A55C59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A6A4E2918147A00A55C59 /* SceneDelegate.swift */; };
-		025A6A512918147A00A55C59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A6A502918147A00A55C59 /* ViewController.swift */; };
+		025A6A512918147A00A55C59 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A6A502918147A00A55C59 /* MainViewController.swift */; };
 		025A6A542918147A00A55C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 025A6A522918147A00A55C59 /* Main.storyboard */; };
 		025A6A562918147B00A55C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 025A6A552918147B00A55C59 /* Assets.xcassets */; };
 		025A6A592918147B00A55C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 025A6A572918147B00A55C59 /* LaunchScreen.storyboard */; };
 		025A6A682918186B00A55C59 /* CoinGecko.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A6A672918186B00A55C59 /* CoinGecko.swift */; };
+		0295211329184135001B03A9 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295211229184135001B03A9 /* UserActionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		025A6A492918147A00A55C59 /* CurrencyExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025A6A4C2918147A00A55C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		025A6A4E2918147A00A55C59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		025A6A502918147A00A55C59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		025A6A502918147A00A55C59 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		025A6A532918147A00A55C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		025A6A552918147B00A55C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		025A6A582918147B00A55C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		025A6A5A2918147B00A55C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		025A6A672918186B00A55C59 /* CoinGecko.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGecko.swift; sourceTree = "<group>"; };
+		0295211229184135001B03A9 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,7 @@
 		025A6A602918151C00A55C59 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				025A6A502918147A00A55C59 /* ViewController.swift */,
+				025A6A502918147A00A55C59 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -80,6 +82,7 @@
 		025A6A612918153200A55C59 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0295211229184135001B03A9 /* UserActionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,8 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0295211329184135001B03A9 /* UserActionCell.swift in Sources */,
 				025A6A682918186B00A55C59 /* CoinGecko.swift in Sources */,
-				025A6A512918147A00A55C59 /* ViewController.swift in Sources */,
+				025A6A512918147A00A55C59 /* MainViewController.swift in Sources */,
 				025A6A4D2918147A00A55C59 /* AppDelegate.swift in Sources */,
 				025A6A4F2918147A00A55C59 /* SceneDelegate.swift in Sources */,
 			);
