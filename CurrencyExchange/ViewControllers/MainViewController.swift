@@ -103,6 +103,7 @@ extension MainViewController {
             let decoder = JSONDecoder()
             do {
                 let currency = try decoder.decode(Currencies.self, from: data)
+                print(currency)
                 self?.showAlert(withStatus: .success)
             } catch let error {
                 print(error.localizedDescription)
