@@ -5,18 +5,18 @@
 //  Created by Екатерина Платонова on 06.11.2022.
 //
 
-struct Welcome: Codable {
+struct Currencies: Decodable {
     let rates: [String: Rate]
 }
 
-struct Rate: Codable {
+struct Rate: Decodable {
     let name: String
     let unit: String
     let value: Double
     let type: TypeEnum
 }
 
-enum TypeEnum: String, Codable {
+enum TypeEnum: String, Decodable {
     case commodity = "commodity"
     case crypto = "crypto"
     case fiat = "fiat"

@@ -32,6 +32,7 @@ class ImageViewController: UIViewController {
             print(response)
             
             guard let image = UIImage(data: data) else { return }
+            
             DispatchQueue.main.async {
                 self?.imageView.image = image
                 self?.activityIndicator.stopAnimating()
