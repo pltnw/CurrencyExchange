@@ -32,9 +32,11 @@ class ImageViewController: UIViewController {
             print(response)
             
             guard let image = UIImage(data: data) else { return }
-            self?.imageView.image = image
-            self?.activityIndicator.stopAnimating()
-        }
+            DispatchQueue.main.async {
+                self?.imageView.image = image
+                self?.activityIndicator.stopAnimating()
+            }
+        }.resume()
     }
     
 }
