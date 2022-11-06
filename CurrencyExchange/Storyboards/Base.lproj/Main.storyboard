@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -49,14 +50,56 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="userActionsLabel" destination="GSY-7p-yVi" id="nC6-OF-74h"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Main View Controller" id="7h4-Aj-1Qb"/>
+                    <connections>
+                        <segue destination="hq8-y2-5gJ" kind="show" identifier="showImage" id="YZw-E5-SPd"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFc-TX-c3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2269.5999999999999" y="0.44977511244377816"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="v4M-Ba-we5">
+            <objects>
+                <viewController id="hq8-y2-5gJ" customClass="ImageViewController" customModule="CurrencyExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OvM-r0-29c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n30-QP-fNI">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="cOz-D0-Khk">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gze-3k-FVV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gze-3k-FVV" firstAttribute="bottom" secondItem="n30-QP-fNI" secondAttribute="bottom" id="4HO-xT-D3i"/>
+                            <constraint firstItem="cOz-D0-Khk" firstAttribute="centerX" secondItem="OvM-r0-29c" secondAttribute="centerX" id="Ulg-Tl-el4"/>
+                            <constraint firstItem="cOz-D0-Khk" firstAttribute="centerY" secondItem="OvM-r0-29c" secondAttribute="centerY" id="X8J-O0-sET"/>
+                            <constraint firstItem="gze-3k-FVV" firstAttribute="trailing" secondItem="n30-QP-fNI" secondAttribute="trailing" id="lIu-fj-zpI"/>
+                            <constraint firstItem="n30-QP-fNI" firstAttribute="leading" secondItem="gze-3k-FVV" secondAttribute="leading" id="v6h-gV-TWx"/>
+                            <constraint firstItem="n30-QP-fNI" firstAttribute="top" secondItem="gze-3k-FVV" secondAttribute="top" id="xNQ-o1-4aD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dsv-vA-ZyF"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="cOz-D0-Khk" id="ot6-eW-5u5"/>
+                        <outlet property="imageView" destination="n30-QP-fNI" id="r5R-RO-rLr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FC4-ga-k1r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3039" y="0.0"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qSd-Ma-Rcm">

@@ -53,8 +53,22 @@ class MainViewController: UICollectionViewController {
             withReuseIdentifier: "userAction",
             for: indexPath
         )
+        
+        guard let cell = cell as? UserActionCell else { return UICollectionViewCell() }
+        cell.userActionsLabel.text = userActions[indexPath.item].rawValue
     
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let userAction = userActions[indexPath.item]
+        
+        switch userAction {
+        case .showImage:
+            performSegue(withIdentifier: "showImage", sender: nil)
+        case .fetchCurrencyInformation:
+            fetchCurrencyInformation()
+        }
     }
     
     private func showAlert(withStatus status: Alert) {
@@ -73,5 +87,11 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         CGSize(width: UIScreen.main.bounds.width - 50, height: 80)
+    }
+}
+
+extension MainViewController {
+    private func fetchCurrencyInformation(){
+        
     }
 }
