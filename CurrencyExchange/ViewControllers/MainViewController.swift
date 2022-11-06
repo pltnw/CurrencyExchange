@@ -72,11 +72,11 @@ class MainViewController: UICollectionViewController {
     }
     
     private func showAlert(withStatus status: Alert) {
-        let alert = UIAlertController(title: status.title, message: status.message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
-        DispatchQueue.main.async { [unowned self] in
-            present(alert, animated: true)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: status.title, message: status.message, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
         }
     }
 }
