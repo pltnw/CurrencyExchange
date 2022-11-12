@@ -59,6 +59,7 @@
                     <navigationItem key="navigationItem" title="Main View Controller" id="7h4-Aj-1Qb"/>
                     <connections>
                         <segue destination="hq8-y2-5gJ" kind="show" identifier="showImage" id="YZw-E5-SPd"/>
+                        <segue destination="p7Z-60-YwX" kind="show" identifier="showInfoSegue" id="ca3-iY-X73"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFc-TX-c3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -99,7 +100,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FC4-ga-k1r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3039" y="0.0"/>
+            <point key="canvasLocation" x="3220" y="-402"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="NWt-B4-e6S">
+            <objects>
+                <tableViewController id="p7Z-60-YwX" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kiz-Ql-az6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showInfo" rowHeight="110" id="Af3-Le-Fzh">
+                                <rect key="frame" x="0.0" y="50" width="375" height="110"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Af3-Le-Fzh" id="TSa-BN-3Ga">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T3i-jq-OXL">
+                                            <rect key="frame" x="16" y="12" width="343" height="86"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curreny name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOC-qt-5WK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g93-SX-8qj">
+                                                    <rect key="frame" x="0.0" y="21.5" width="343" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWu-VU-ezZ">
+                                                    <rect key="frame" x="0.0" y="43" width="343" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYA-AS-zS2">
+                                                    <rect key="frame" x="0.0" y="64.5" width="343" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="T3i-jq-OXL" firstAttribute="leading" secondItem="TSa-BN-3Ga" secondAttribute="leadingMargin" id="0RM-ge-ggm"/>
+                                        <constraint firstAttribute="bottom" secondItem="T3i-jq-OXL" secondAttribute="bottom" constant="12" id="ZkX-TF-VE4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="T3i-jq-OXL" secondAttribute="trailing" id="l38-Pw-tp6"/>
+                                        <constraint firstItem="T3i-jq-OXL" firstAttribute="top" secondItem="TSa-BN-3Ga" secondAttribute="top" constant="12" id="lLA-xK-Ffv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="p7Z-60-YwX" id="wH2-d1-Qct"/>
+                            <outlet property="delegate" destination="p7Z-60-YwX" id="jaD-ZT-FL4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="bLj-lZ-55g"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1o2-Y5-tB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3220" y="395"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qSd-Ma-Rcm">
