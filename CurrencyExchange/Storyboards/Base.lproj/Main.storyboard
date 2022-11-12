@@ -84,7 +84,7 @@
                         <viewLayoutGuide key="safeArea" id="gze-3k-FVV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gze-3k-FVV" firstAttribute="bottom" secondItem="n30-QP-fNI" secondAttribute="bottom" id="4HO-xT-D3i"/>
+                            <constraint firstAttribute="bottom" secondItem="n30-QP-fNI" secondAttribute="bottom" id="4HO-xT-D3i"/>
                             <constraint firstItem="cOz-D0-Khk" firstAttribute="centerX" secondItem="OvM-r0-29c" secondAttribute="centerX" id="Ulg-Tl-el4"/>
                             <constraint firstItem="cOz-D0-Khk" firstAttribute="centerY" secondItem="OvM-r0-29c" secondAttribute="centerY" id="X8J-O0-sET"/>
                             <constraint firstItem="gze-3k-FVV" firstAttribute="trailing" secondItem="n30-QP-fNI" secondAttribute="trailing" id="lIu-fj-zpI"/>
@@ -111,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showInfo" rowHeight="110" id="Af3-Le-Fzh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="110" id="Af3-Le-Fzh" customClass="InfoTableViewCell" customModule="CurrencyExchange" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Af3-Le-Fzh" id="TSa-BN-3Ga">
