@@ -80,7 +80,6 @@
 			children = (
 				02744B1729184BCC00F40B2C /* ImageViewController.swift */,
 				025A6A502918147A00A55C59 /* MainViewController.swift */,
-				026E856929203F2A00829B33 /* InfoTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -88,6 +87,7 @@
 		025A6A612918153200A55C59 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				026E856929203F2A00829B33 /* InfoTableViewCell.swift */,
 				0295211229184135001B03A9 /* UserActionCell.swift */,
 			);
 			path = Views;
