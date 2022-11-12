@@ -59,7 +59,7 @@
                     <navigationItem key="navigationItem" title="Main View Controller" id="7h4-Aj-1Qb"/>
                     <connections>
                         <segue destination="hq8-y2-5gJ" kind="show" identifier="showImage" id="YZw-E5-SPd"/>
-                        <segue destination="p7Z-60-YwX" kind="show" identifier="showInfoSegue" id="ca3-iY-X73"/>
+                        <segue destination="p7Z-60-YwX" kind="show" identifier="showInfo" id="ca3-iY-X73"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFc-TX-c3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="3220" y="-402"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Info Currency Table View Controller-->
         <scene sceneID="NWt-B4-e6S">
             <objects>
-                <tableViewController id="p7Z-60-YwX" sceneMemberID="viewController">
+                <tableViewController id="p7Z-60-YwX" customClass="InfoCurrencyTableViewController" customModule="CurrencyExchange" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kiz-Ql-az6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,6 +155,12 @@
                                         <constraint firstItem="T3i-jq-OXL" firstAttribute="top" secondItem="TSa-BN-3Ga" secondAttribute="top" constant="12" id="lLA-xK-Ffv"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="currencyName" destination="iOC-qt-5WK" id="lEV-02-7zL"/>
+                                    <outlet property="currencyType" destination="fYA-AS-zS2" id="255-rb-w9H"/>
+                                    <outlet property="currencyUnit" destination="g93-SX-8qj" id="2GH-cK-5tT"/>
+                                    <outlet property="currencyValue" destination="AWu-VU-ezZ" id="Wp1-VT-ogD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

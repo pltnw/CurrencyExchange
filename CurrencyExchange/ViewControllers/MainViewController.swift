@@ -15,6 +15,7 @@ enum Link: String {
 enum UserAction: String, CaseIterable {
     case showImage = "Show Image"
     case fetchCurrencyInformation = "Currency Information"
+    case showCurrencyInformation = "Show Information"
 }
 
 enum Alert {
@@ -68,6 +69,15 @@ class MainViewController: UICollectionViewController {
             performSegue(withIdentifier: "showImage", sender: nil)
         case .fetchCurrencyInformation:
             fetchCurrencyInformation()
+        case .showCurrencyInformation:
+            performSegue(withIdentifier: "showInfo", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showInfo" {
+            guard let infoCurrencysVS = segue.destination as? InfoCurrencyTableViewController else { return }
+            infoCurrencysVS.fetchCurrencyInformation()
         }
     }
     
@@ -91,7 +101,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension MainViewController {
-    private func fetchCurrencyInformation(){
+    private func fetchCurrencyInformation() {
         guard let url = URL(string: Link.coinGecko.rawValue) else { return }
         
         URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
