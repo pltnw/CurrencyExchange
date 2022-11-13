@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ManualInfoTableViewController: UITableViewController {
 
@@ -33,8 +34,47 @@ class ManualInfoTableViewController: UITableViewController {
         return cell
     }
     
+//    private func fetchCoins() {
+//        AF.request(Link.coinGecko.rawValue)
+//            .responseJSON { dataResponse in
+//                guard let statusCode = dataResponse.response?.statusCode else { return }
+//
+//                print("Status code: \(statusCode)")
+//
+//                if (200..<300).contains(statusCode) {
+//                    guard let value = dataResponse.value else { return }
+//                    print("Value: \(value)")
+//
+//                    return
+//                }
+//
+//                guard let error = dataResponse.error else { return }
+//                print("Error: \(error)")
+//            }
+//    }
+    
     private func fetchCoins() {
-        
+        AF.request(Link.coinGecko.rawValue)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    guard let coinsData = value as? [String: Any] else { return }
+//                    print(coinsData)
+                    
+                   let coin = Rate(
+                            name: coinsData["name"] as? String ?? "",
+                            unit: coinsData["unit"] as? String ?? "",
+                            value: coinsData["value"] as? Double ?? 0,
+                            type: coinsData["type"] as? TypeEnum ?? .crypto
+                        )
+                    
+                    print(coin)
+                    
+                case .failure(let error):
+                    print(error)
+                }
+            }
     }
 }
 
