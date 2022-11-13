@@ -18,6 +18,7 @@
 		026E856C2920450D00829B33 /* InfoCurrencyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026E856B2920450D00829B33 /* InfoCurrencyTableViewController.swift */; };
 		02744B1829184BCC00F40B2C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02744B1729184BCC00F40B2C /* ImageViewController.swift */; };
 		0295211329184135001B03A9 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295211229184135001B03A9 /* UserActionCell.swift */; };
+		02DE5B0D2921232300405D9E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE5B0C2921232300405D9E /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		026E856B2920450D00829B33 /* InfoCurrencyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCurrencyTableViewController.swift; sourceTree = "<group>"; };
 		02744B1729184BCC00F40B2C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		0295211229184135001B03A9 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
+		02DE5B0C2921232300405D9E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		025A6A632918156800A55C59 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				02DE5B0C2921232300405D9E /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02DE5B0D2921232300405D9E /* NetworkManager.swift in Sources */,
 				0295211329184135001B03A9 /* UserActionCell.swift in Sources */,
 				025A6A682918186B00A55C59 /* CoinGecko.swift in Sources */,
 				025A6A512918147A00A55C59 /* MainViewController.swift in Sources */,
