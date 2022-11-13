@@ -38,4 +38,28 @@ class NetworkManager {
             }
         }
     }
+    
+    func fetchCurrencys(from url: String, completion: @escaping(Result<Currencies, NetworkError>) -> Void) {
+        guard let url = URL(string: url) else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                completion(.failure(.noData))
+                print(error?.localizedDescription ?? "No error description")
+                return
+            }
+            
+            do {
+                let currency = try JSONDecoder().decode(Currencies.self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(currency))
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }.resume()
+    }
 }
