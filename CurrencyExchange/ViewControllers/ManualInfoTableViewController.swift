@@ -52,7 +52,10 @@ class ManualInfoTableViewController: UITableViewController {
                         name: coinsData["name"] as? String ?? "",
                         unit: coinsData["unit"] as? String ?? "",
                         value: coinsData["value"] as? Double ?? 0,
-                        type: coinsData["type"] as? TypeEnum ?? .crypto)])
+                        type: coinsData["type"] as? TypeEnum ?? .crypto
+                    )])
+                    
+                    print(coin)
                     
                     self?.currencys = coin
                     
