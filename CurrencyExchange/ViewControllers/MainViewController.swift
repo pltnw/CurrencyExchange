@@ -8,9 +8,10 @@
 import UIKit
 
 enum UserAction: String, CaseIterable {
-    case showImage = "Show Image"
-    case fetchCurrencyInformation = "Currency Information"
-    case showCurrencyInformation = "Show Information"
+    case showImage = "Show image"
+    case fetchCurrencyInformation = "Show info in debug area"
+    case showCurrencyInformation = "Show information"
+    case manualParsing = "Manual parsing"
 }
 
 enum Alert {
@@ -66,6 +67,8 @@ class MainViewController: UICollectionViewController {
             fetchCurrencyInformation()
         case .showCurrencyInformation:
             performSegue(withIdentifier: "showInfo", sender: nil)
+        case .manualParsing:
+            performSegue(withIdentifier: "showManualResults", sender: nil)
         }
     }
     
@@ -73,6 +76,9 @@ class MainViewController: UICollectionViewController {
         if segue.identifier == "showInfo" {
             guard let infoCurrencysVS = segue.destination as? InfoCurrencyTableViewController else { return }
             infoCurrencysVS.fetchCurrencyInformation()
+        }
+        if segue.identifier == "showManualResults" {
+            guard segue.destination is ManualInfoTableViewController else { return }
         }
     }
     

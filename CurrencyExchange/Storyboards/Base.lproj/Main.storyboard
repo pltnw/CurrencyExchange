@@ -60,6 +60,7 @@
                     <connections>
                         <segue destination="hq8-y2-5gJ" kind="show" identifier="showImage" id="YZw-E5-SPd"/>
                         <segue destination="p7Z-60-YwX" kind="show" identifier="showInfo" id="ca3-iY-X73"/>
+                        <segue destination="tON-Sh-0Yq" kind="show" identifier="showManualResults" id="I9s-2v-MDX"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFc-TX-c3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -100,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FC4-ga-k1r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3220" y="-402"/>
+            <point key="canvasLocation" x="3438" y="-576"/>
         </scene>
         <!--Info Currency Table View Controller-->
         <scene sceneID="NWt-B4-e6S">
@@ -172,7 +173,79 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1o2-Y5-tB8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3220" y="395"/>
+            <point key="canvasLocation" x="4113" y="1"/>
+        </scene>
+        <!--Manual Info Table View Controller-->
+        <scene sceneID="Ohh-2f-gdX">
+            <objects>
+                <tableViewController id="tON-Sh-0Yq" customClass="ManualInfoTableViewController" customModule="CurrencyExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4UQ-hi-2yn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="manualInfoCell" rowHeight="110" id="vxs-MG-IE4" customClass="ManualInfoTableViewCell" customModule="CurrencyExchange" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="375" height="110"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vxs-MG-IE4" id="g3Z-W2-X1T">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Am2-QN-A8j">
+                                            <rect key="frame" x="16" y="12" width="343" height="86"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coin:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6X-eD-1Wt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taW-5P-Ix9">
+                                                    <rect key="frame" x="0.0" y="22" width="343" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfF-Ow-ojD">
+                                                    <rect key="frame" x="0.0" y="43.5" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noW-Gq-Sym">
+                                                    <rect key="frame" x="0.0" y="65.5" width="343" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Am2-QN-A8j" secondAttribute="trailing" constant="16" id="E64-55-mHR"/>
+                                        <constraint firstAttribute="bottom" secondItem="Am2-QN-A8j" secondAttribute="bottom" constant="12" id="GbF-jv-qn5"/>
+                                        <constraint firstItem="Am2-QN-A8j" firstAttribute="top" secondItem="g3Z-W2-X1T" secondAttribute="top" constant="12" id="Tpj-cZ-5U2"/>
+                                        <constraint firstItem="Am2-QN-A8j" firstAttribute="leading" secondItem="g3Z-W2-X1T" secondAttribute="leading" constant="16" id="iE0-P4-GWp"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coinName" destination="Q6X-eD-1Wt" id="HLW-I9-dQr"/>
+                                    <outlet property="coinType" destination="noW-Gq-Sym" id="7E7-jk-yBd"/>
+                                    <outlet property="coinUnit" destination="taW-5P-Ix9" id="3MF-vL-n4I"/>
+                                    <outlet property="coinValue" destination="WfF-Ow-ojD" id="4Oi-fl-god"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tON-Sh-0Yq" id="Gqp-UL-QDb"/>
+                            <outlet property="delegate" destination="tON-Sh-0Yq" id="HMb-SH-I28"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="GIy-dr-hn2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFR-eU-0X0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3439" y="597"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qSd-Ma-Rcm">
