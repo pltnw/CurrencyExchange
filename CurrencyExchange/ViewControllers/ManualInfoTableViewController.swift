@@ -60,7 +60,7 @@ class ManualInfoTableViewController: UITableViewController {
                 switch dataResponse.result {
                 case .success(let value):
                     guard let coinsData = value as? [String: Any] else { return }
-//                    print(coinsData)
+                    print("Value of JSON: \(coinsData)")
                     
                    let coin = Rate(
                             name: coinsData["name"] as? String ?? "",
@@ -68,8 +68,8 @@ class ManualInfoTableViewController: UITableViewController {
                             value: coinsData["value"] as? Double ?? 0,
                             type: coinsData["type"] as? TypeEnum ?? .crypto
                         )
-                    
-                    print(coin)
+
+                    print("Coin: \(coin)")
                     
                 case .failure(let error):
                     print(error)
