@@ -7,11 +7,6 @@
 
 import UIKit
 
-enum Link: String {
-    case imageURL = "https://s2.best-wallpaper.net/wallpaper/iphone/1709/Money-paper-currency_iphone_1080x1920.jpg"
-    case coinGecko = "https://api.coingecko.com/api/v3/exchange_rates"
-}
-
 enum UserAction: String, CaseIterable {
     case showImage = "Show Image"
     case fetchCurrencyInformation = "Currency Information"
