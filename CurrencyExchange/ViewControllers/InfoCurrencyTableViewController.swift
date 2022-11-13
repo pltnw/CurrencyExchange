@@ -32,24 +32,42 @@ class InfoCurrencyTableViewController: UITableViewController {
     }
 }
 
+//extension InfoCurrencyTableViewController {
+//    func fetchCurrencyInformation() {
+//        guard let url = URL(string: Link.coinGecko.rawValue) else { return }
+//
+//        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+//            guard let data = data else {
+//                print(error?.localizedDescription ?? "No error description")
+//                return
+//            }
+//
+//            do {
+//                self?.currencys = try JSONDecoder().decode(Currencies.self, from: data)
+//                DispatchQueue.main.async {
+//                    self?.tableView.reloadData()
+//                }
+//            } catch let error {
+//                print(error.localizedDescription)
+//            }
+//        }.resume()
+//    }
+//}
+
+
 extension InfoCurrencyTableViewController {
     func fetchCurrencyInformation() {
-        guard let url = URL(string: Link.coinGecko.rawValue) else { return }
-        
-        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            
-            do {
-                self?.currencys = try JSONDecoder().decode(Currencies.self, from: data)
+        NetworkManager.shared.fetchCurrencys(from: Link.coinGecko.rawValue) { [weak self] result in
+            switch result {
+            case .success(let currencys):
+                print(currencys)
+                self?.currencys = currencys
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
-            } catch let error {
+            case .failure(let error):
                 print(error.localizedDescription)
             }
-        }.resume()
+        }
     }
 }
